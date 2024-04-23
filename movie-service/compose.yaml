@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=movies'
+      - 'MYSQL_PASSWORD=CineverseIsGreat'
+      - 'MYSQL_ROOT_PASSWORD=ThisIsNotAWeakPassword'
+      - 'MYSQL_USER=admin'
+    ports:
+      - '3306'

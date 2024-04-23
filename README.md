@@ -66,7 +66,17 @@ Future plans include the addition of RabbitMQ and distributed tracing.
 
 ### Useful resources
 
--
+- When creating entities with Spring Data JPA and Hibernate, it's a good practice to implement the `Serializable`
+  interface along with the `serialVersionUID` field. This is useful because it prevents the `InvalidClassException` from
+  being thrown when the entity is serialized. `Serializable` is used in Java in a variety of contexts, like when
+  persisting objects to a file or sending them over the
+  network. [Source](https://stackoverflow.com/questions/285793/what-is-a-serialversionuid-and-why-should-i-use-it).
+- It's recommended to use `@Serial` annotation "to help a compiler catch mis-declared serialization-related fields and
+  methods". [Source](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serial.html).
+- Java Records, introduced in Java 16, are a great way to create simple data carriers. They are immutable and
+  Serializable by default, there is no need to add the `serialVersionUID` field and the `@Serial` annotation, as they
+  are serialized in a different
+  way. [Source](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html).
 
 ## 🎨 Author
 

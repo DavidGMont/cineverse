@@ -7,4 +7,4 @@ services:
       - 'MYSQL_ROOT_PASSWORD=ThisIsNotAWeakPassword'
       - 'MYSQL_USER=admin'
     ports:
-      - '3306'
+      - '3307:3306'

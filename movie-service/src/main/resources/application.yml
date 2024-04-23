@@ -3,6 +3,3 @@ spring:
     name: movie-service
   config:
     import: "optional:configserver:"
-  docker:
-    compose:
-      file: ./movie-service/compose.yaml
